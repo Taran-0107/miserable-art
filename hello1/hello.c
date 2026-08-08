@@ -13,7 +13,7 @@ int main(){
 
     int r;
     
-    printf(str);
+    printf("%s", str);
     printf("Enter the radius of the circle: ");
     scanf("%d", &r);
     float result = area(r);
