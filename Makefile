@@ -1,6 +1,6 @@
 CC = gcc
 
-ROOT = ./hello
+ROOT = ./hello1
 INIT = $(ROOT)/init
 
 all: hello kovid
