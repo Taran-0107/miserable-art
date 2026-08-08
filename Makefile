@@ -1,13 +1,15 @@
-CC=gcc
+CC = gcc
 
+ROOT = ./hello
+INIT = $(ROOT)/init
 
 all: hello kovid
 
-hello: hello.c init.c init.h
-	$(CC) -I. -o hello hello.c init.c
+hello: $(ROOT)/hello.c $(INIT)/init.c $(INIT)/init.h
+	$(CC) -I$(INIT) -o $(ROOT)/hello $(ROOT)/hello.c $(INIT)/init.c
 
-kovid: kovid.c init.c init.h
-	$(CC) -I. -o kovid kovid.c init.c
+kovid: $(ROOT)/kovid.c $(INIT)/init.c $(INIT)/init.h
+	$(CC) -I$(INIT) -o $(ROOT)/kovid $(ROOT)/kovid.c $(INIT)/init.c
 
 clean:
-	rm hello
+	del $(ROOT)\hello.exe $(ROOT)\kovid.exe
