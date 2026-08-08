@@ -1,12 +1,14 @@
 #include<stdio.h>
-#include<init.h>
+
+
+char* init(){
+    char* str = "\nThis is a sample Test Program, for Ishaan Pandey\nyour task is to complete the area program to find the area of a circle, the `area` function\nyou can check the help.txt foe help\n\nGood Luck Kiddo :) <3\nUwU\nOwO\n";
+    return str;
+}
 
 float area(int r){
     //compete this program to calculate the area of a circle
-
-    int r2=r*r;;
-    float value=(float)r2*3.14;
-    float area=value;
+    float area=(float)r;
     return area;
 }
 
