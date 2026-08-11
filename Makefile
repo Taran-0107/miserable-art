@@ -4,7 +4,10 @@ ROOT = ./hello1
 INIT = $(ROOT)/init
 LOOP= ./loops
 
-all: hello kovid loop
+all: hello kovid loop loop2
+
+loop2: $(LOOP)/loop2.c 
+	$(CC) -o $(LOOP)/loop2 $(LOOP)/loop2.c
 
 loop: $(LOOP)/loop1.c 
 	$(CC) -o $(LOOP)/loop1 $(LOOP)/loop1.c
