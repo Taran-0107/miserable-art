@@ -4,8 +4,9 @@ CC = gcc
 #INIT = $(ROOT)/init
 #LOOP= ./loops
 FUNC= ./funky
+REC=./rec
 
-all: funky1
+all: funky1 recur
 
 #loop2: $(LOOP)/loop2.c 
 #	$(CC) -o $(LOOP)/loop2 $(LOOP)/loop2.c
@@ -21,6 +22,9 @@ all: funky1
 
 funky1: $(FUNC)/func2.c 
 	$(CC) -o $(FUNC)/func2 $(FUNC)/func2.c
+
+recur: $(REC)/recur.c 
+	$(CC) -o $(REC)/recur $(REC)/recur.c
 
 clean:
 #	del $(ROOT)/hello.exe $(ROOT)/kovid.exe
